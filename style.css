@@ -1,0 +1,171 @@
+:root {
+    --bg: #f7f3ea;
+    --surface: #fffdf8;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --accent: #2563eb;
+    --accent-soft: #dbeafe;
+    --border: #e5e7eb;
+    --shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.7;
+    color: var(--text);
+    background: linear-gradient(180deg, #faf7ef 0%, var(--bg) 100%);
+}
+
+.page-shell {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 48px 24px 64px;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 0 0 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+    background: transparent;
+    box-shadow: none;
+}
+
+.eyebrow {
+    margin: 0 0 8px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+h1 {
+    margin: 0 0 10px;
+    font-size: clamp(2rem, 3vw, 2.6rem);
+    line-height: 1.2;
+}
+
+.intro {
+    margin: 0;
+    max-width: 620px;
+    color: var(--muted);
+    font-size: 1.02rem;
+}
+
+.socials a {
+    display: inline-block;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 180ms ease;
+}
+
+.socials a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+    transform: none;
+    box-shadow: none;
+}
+
+main {
+    display: grid;
+    gap: 18px;
+}
+
+.card {
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.card+.card {
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+}
+
+h2 {
+    margin: 0 0 16px;
+    font-size: 1.16rem;
+    color: #111827;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 12px;
+}
+
+li {
+    padding: 0;
+}
+
+.item-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+h3 {
+    margin: 0 0 2px;
+    font-size: 1rem;
+}
+
+.meta,
+.role,
+.tech,
+.skill,
+.certification {
+    color: var(--muted);
+}
+
+.role {
+    margin: 4px 0 8px;
+    font-weight: 600;
+    color: #374151;
+}
+
+p {
+    margin: 0 0 8px;
+}
+
+.tech {
+    margin-top: 10px;
+}
+
+.certifications,
+.skills {
+    gap: 8px;
+}
+
+@media (max-width: 680px) {
+    .page-shell {
+        padding: 24px 16px 32px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 24px 20px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}
